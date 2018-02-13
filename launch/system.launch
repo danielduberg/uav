@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find transforms)/launch/sensor_static_transforms.launch" />
+
+  <include file="$(find collision_avoidance)/launch/collision_avoidance.launch" />
+
+  <include file="$(find controller)/launch/controller.launch" />
+
+  <include file="$(find controller_joy)/launch/controller_joy.launch" />
+</launch>
