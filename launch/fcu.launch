@@ -2,7 +2,9 @@
 
 <launch>
     <!-- MAVROS -->
-    <arg name="fcu_device" default="/dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT97O9G7-if00-port0" />
+    <!--arg name="fcu_device" default="/dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT97O9G7-if00-port0" /-->  <!-- Ribbit -->
+    <arg name="fcu_device" default="/dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT97OAZ4-if00-port0" />  <!-- Fugu -->
+    
     <arg name="fcu_baud" default="921600" />
     <arg name="fcu_url" default="$(arg fcu_device):$(arg fcu_baud)" />
     <arg name="gcs_url" default="udp://@224.0.0.1:14550" />

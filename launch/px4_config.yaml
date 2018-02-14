@@ -67,7 +67,7 @@ imu:
 local_position:
   frame_id: "map"
   tf:
-    send: true
+    send: false
     frame_id: "map"
     child_frame_id: "base_link"
     send_fcu: false
@@ -134,8 +134,8 @@ distance_sensor:
     id: 0
     frame_id: "teraranger_link"
     orientation: ROLL_180 # RPY
-    field_of_view: 0.0  # XXX TODO
-    send_tf: true
+    field_of_view: 1.0  # XXX TODO
+    send_tf: false
     sensor_position: {x:  -0.155, y:  -0.085, z:  -0.10}
 
 # image_pub
