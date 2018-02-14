@@ -2,11 +2,6 @@
 <launch>
   <node pkg="nodelet" type="nodelet" name="collision_avoidance_manager" args="manager" output="screen" />
 
-
-  <!-- Pass in collision_avoidance_config_file:=/path/to/config.yaml to change options. -->
-  <arg name="collision_avoidance_config_file"
-    default="$(find collision_avoidance)/config/collision_avoidance_uav.yaml" />
-
   <node pkg="nodelet" type="nodelet" name="collision_avoidance_nodelet" args="load collision_avoidance/CA collision_avoidance_manager" output="screen">
     <param name="radius" type="double" value="0.225" />
     <param name="security_distance" type="double" value="0.41" />
@@ -56,7 +51,7 @@
     <!--     <remap from="collision_free_control" to="controller/joy" />-->
   </node>
 
-  <arg name="js" default="1" />
+  <arg name="js" default="0" />
 
   <node pkg="joy" type="joy_node" name="joy" required="True">
     <param name="autorepeat_rate" value="100" /> <!-- Minimal update rate, Hz -->
@@ -64,7 +59,7 @@
   </node>
 
   <!-- Pass in joy_config_file:=/path/to/config.yaml to change options. -->
-  <arg name="joy_config_file" default="$(find controller_joy)/config/ds4.yaml" />
+  <arg name="joy_config_file" default="$(find controller_joy)/config/ds4_wireless.yaml" />
 
   <node pkg="controller_joy" type="controller_joy_node" name="controller_joy_node">
     <rosparam file="$(arg joy_config_file)" command="load" />
