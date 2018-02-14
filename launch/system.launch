@@ -12,8 +12,8 @@
     <param name="security_distance" type="double" value="0.41" />
     <param name="epsilon" type="double" value="0.1" />
 
-    <param name="min_change_in_direction" type="double" value="0.0" />
-    <param name="max_change_in_direction" type="double" value="0.0" />
+    <param name="min_change_in_direction" type="double" value="5.0" />
+    <param name="max_change_in_direction" type="double" value="45.0" />
 
     <param name="min_opposite_direction" type="double" value="0.0" />
     <param name="max_opposite_direction" type="double" value="10.0" />
